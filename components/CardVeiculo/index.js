@@ -7,7 +7,7 @@ export default function CardVeiculo({props, veiculo}) {
     return (
         <ImageBackground
             style={estilo.container}
-            source={`.../.../assets/img_veiculos/${img}`}
+            source={`../../assets/img_veiculos/${img}`}
             resizeMode="repeat"
             imageStyle={{borderRadius: 10}}
             onTouchEnd={irParaDetalhes}

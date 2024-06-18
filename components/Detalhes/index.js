@@ -1,4 +1,5 @@
-import { Text, Image, ScrollView } from "react-native";
+import { Text, View, ScrollView } from "react-native";
+import { Image } from 'expo-image'
 import { Ionicons } from '@expo/vector-icons'
 import estilo from './estilo'
 
@@ -9,13 +10,14 @@ export default function Detalhes(props) {
     return (
         <View style={estilo.container}>
             <View style={estilo.head}>
-            <Ionicons name="arrow-back-outline" size={24} color="#555" onPress={voltar} /> <Text style={estilo.head_title}>Detalhes</Text>
+            <Ionicons name="arrow-back-outline" size={24} color="#555" onPress={voltar} />
+            <Text style={estilo.head_title}>Detalhes</Text>
             </View>
             <View style={estilo.body}>
                 <View style={estilo.slides}>
                     <ScrollView horizontal={true}>
                     {
-                        veiculo.fotos.map(foto=>(<Image style={estilo.foto} source={require(`../../assets/img_veiculos/1.1.webp`)} />))
+                        veiculo.fotos.map(foto=>(<Image style={estilo.foto} source={`../../assets/img_veiculos/${foto}`} />))
                     }
                     </ScrollView>
                 </View>
